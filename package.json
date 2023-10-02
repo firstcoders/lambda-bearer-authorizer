@@ -1,7 +1,7 @@
 {
   "name": "@soundws/lambda-bearer-authorizer",
   "license": "AGPL-3.0-or-later",
-  "version": "0.0.1-beta.0",
+  "version": "0.0.1-beta.1",
   "description": "A lambda authorizer for bearer JWT token",
   "author": "The First Coders Team (https://www.firstcoders.co.uk)",
   "email": "support@firstcoders.co.uk",
