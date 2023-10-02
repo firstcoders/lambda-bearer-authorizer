@@ -1,0 +1,79 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  A lambda authorizer bearer authorizer
+
+Parameters:
+  # todo more validation
+  # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html
+  LogLevel:
+    Type: String
+    Description: The log level
+    Default: 'error'
+    AllowedValues:
+      - debug
+      - info
+      - error
+  SwsSecret:
+    Type: String
+    Description: The shared JWT secret used to authenticate to the service.
+    NoEcho: true
+  JwtAudience:
+    Type: String
+    Description: The audience to use to validate the token against
+  JwtAllowedAlgorithms:
+    Type: CommaDelimitedList
+    Description: Comma-delimited list of the allowed algorithms
+    Default: 'HS256'
+
+Globals:
+  Function:
+    Timeout: 30
+    Runtime: nodejs18.x
+    MemorySize: 256
+    Environment:
+      Variables:
+        LOG_LEVEL: !Ref LogLevel
+        JWT_AUDIENCE: !Ref JwtAudience
+        SWS_SECRET: !Ref SwsSecret
+        JWT_ALLOWED_ALGORITHMS: !Join [',', !Ref JwtAllowedAlgorithms]
+
+Resources:
+  LambdaAuthorizerFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Description: Authorizer using a bearer token contained in the authorization header
+      Handler: src/handler.default
+    Metadata:
+      BuildMethod: esbuild
+      BuildProperties:
+        Format: esm
+        OutExtension:
+          - .js=.mjs
+        Target: 'es2020'
+        Sourcemap: false
+        EntryPoints:
+          - src/handler.js
+        External:
+          - '@aws-sdk'
+        Banner:
+          - js=import { createRequire } from 'module'; const require = createRequire(import.meta.url);
+
+Outputs:
+  LambdaAuthorizerFunctionArn:
+    Description: 'The lambda authorizer ARN'
+    Value: !GetAtt LambdaAuthorizerFunction.Arn
+
+Metadata:
+  AWS::ServerlessRepo::Application:
+    Name: soundws-lambda-bearer-authorizer
+    Description: >
+      A lambda authorizer for a bearer token
+    Author: Team First Coders
+    ReadmeUrl: README.md
+    SpdxLicenseId: MIT
+    LicenseUrl: LICENSE
+    Labels: ['layer', 'lambda', 'serverless', 'authorizer']
+    HomePageUrl: https://github.com/sound-ws/lambda-bearer-authorizer
+    SourceCodeUrl: https://github.com/sound-ws/lambda-bearer-authorizer
+    SemanticVersion: 1.0.0 # overwritten by sam publish cli command

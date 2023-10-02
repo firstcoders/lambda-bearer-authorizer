@@ -1,0 +1,11 @@
+node_modules
+package-lock.json
+layer
+.env
+dist
+serverless.yml
+yarn-error.log
+.aws-sam
+.vscode
+packaged.yaml
+coverage
