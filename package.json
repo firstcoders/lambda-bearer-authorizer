@@ -31,7 +31,8 @@
   },
   "scripts": {
     "test": "jest tests/",
-    "build": "sam build",
+    "build": "sam build && npm run build:licenses",
+    "build:licenses": "node build/3rd-party-licenses.mjs",
     "qa": "eslint \"src/**/*.js\" && sam validate --lint",
     "precommit": "lint-staged",
     "prepublishOnly": "npm run build",
@@ -47,6 +48,8 @@
     "@babel/eslint-parser": "^7.22.15",
     "@babel/preset-env": "^7.22.20",
     "babel-jest": "^29.7.0",
+    "esbuild": "^0.19.4",
+    "esbuild-plugin-license": "^1.2.2",
     "jest": "^29.7.0"
   }
 }
