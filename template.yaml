@@ -31,6 +31,7 @@ Globals:
     Timeout: 30
     Runtime: nodejs18.x
     MemorySize: 256
+    CodeUri: src
     Environment:
       Variables:
         LOG_LEVEL: !Ref LogLevel
@@ -43,7 +44,7 @@ Resources:
     Type: 'AWS::Serverless::Function'
     Properties:
       Description: Authorizer using a bearer token contained in the authorization header
-      Handler: src/handler.default
+      Handler: handler.default
     Metadata:
       BuildMethod: esbuild
       BuildProperties:
@@ -53,7 +54,7 @@ Resources:
         Target: 'es2020'
         Sourcemap: false
         EntryPoints:
-          - src/handler.js
+          - handler.js
         External:
           - '@aws-sdk'
         Banner:
