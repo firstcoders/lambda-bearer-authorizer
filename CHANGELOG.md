@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-beta.5](https://github.com/sound-ws/lambda-bearer-authorizer/compare/@soundws/lambda-bearer-authorizer@0.0.1-beta.4...@soundws/lambda-bearer-authorizer@0.0.1-beta.5) (2023-11-16)
+
+**Note:** Version bump only for package @soundws/lambda-bearer-authorizer
+
 ## [0.0.1-beta.4](https://github.com/sound-ws/lambda-bearer-authorizer/compare/@soundws/lambda-bearer-authorizer@0.0.1-beta.3...@soundws/lambda-bearer-authorizer@0.0.1-beta.4) (2023-11-09)
 
 **Note:** Version bump only for package @soundws/lambda-bearer-authorizer
