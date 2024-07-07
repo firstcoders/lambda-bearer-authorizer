@@ -1,12 +1,12 @@
 {
-  "name": "@soundws/lambda-bearer-authorizer",
+  "name": "@firstcoders/lambda-bearer-authorizer",
   "license": "AGPL-3.0-or-later",
   "version": "0.0.3-beta.1",
   "description": "A lambda authorizer for bearer JWT token",
   "author": "The First Coders Team (https://www.firstcoders.co.uk)",
   "email": "support@firstcoders.co.uk",
-  "bugs": "https://github.com/sound-ws/lambda-bearer-authorizer/issues",
-  "homepage": "https://github.com/sound-ws/lambda-bearer-authorizer",
+  "bugs": "https://github.com/firstcoders/lambda-bearer-authorizer/issues",
+  "homepage": "https://github.com/firstcoders/lambda-bearer-authorizer",
   "contributors": [
     {
       "name": "Mark Cremer",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sound-ws/lambda-bearer-authorizer.git"
+    "url": "https://github.com/firstcoders/lambda-bearer-authorizer.git"
   },
   "files": [
     "dist",
@@ -40,7 +40,7 @@
     "sam:publish": "npm run build && sam package --template-file .aws-sam/build/template.yaml --output-template-file .aws-sam/build/packaged.yaml --s3-bucket $AWS_SAM_PACKAGE_BUCKET_NAME --region $AWS_REGION && sam publish --template .aws-sam/build/packaged.yaml --region $AWS_REGION --semantic-version $npm_package_version"
   },
   "dependencies": {
-    "@soundws/service-libs": "^1.3.3-beta.1",
+    "@firstcoders/service-libs": "^1.3.3-beta.1",
     "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {

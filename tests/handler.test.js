@@ -4,7 +4,7 @@ import config from '../src/config';
 
 config.swsSecret = 'thisisnotasecret';
 
-jest.mock('@soundws/service-libs/src/logger');
+jest.mock('@firstcoders/service-libs/src/logger');
 
 describe('authorizeBearerToken', () => {
   describe('when no token is provided', () => {

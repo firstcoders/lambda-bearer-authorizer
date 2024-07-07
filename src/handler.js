@@ -14,10 +14,10 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
-import createHandler from '@soundws/service-libs/src/createHandler';
-import createPolicy from '@soundws/service-libs/src/createPolicy';
-import verifyAccessToken from '@soundws/service-libs/src/verifyAccessToken';
-import logger from '@soundws/service-libs/src/logger';
+import createHandler from '@firstcoders/service-libs/src/createHandler';
+import createPolicy from '@firstcoders/service-libs/src/createPolicy';
+import verifyAccessToken from '@firstcoders/service-libs/src/verifyAccessToken';
+import logger from '@firstcoders/service-libs/src/logger';
 import config from './config';
 
 export default createHandler(async (event) => {
