@@ -2,7 +2,7 @@
   "name": "@firstcoders/lambda-bearer-authorizer",
   "private": true,
   "license": "AGPL-3.0-or-later",
-  "version": "0.0.3-beta.3",
+  "version": "0.0.3-beta.4",
   "description": "A lambda authorizer for bearer JWT token",
   "author": "The First Coders Team (https://www.firstcoders.co.uk)",
   "email": "support@firstcoders.co.uk",
