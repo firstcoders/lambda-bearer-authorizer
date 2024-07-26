@@ -75,6 +75,6 @@ Metadata:
     SpdxLicenseId: MIT
     LicenseUrl: LICENSE
     Labels: ['layer', 'lambda', 'serverless', 'authorizer']
-    HomePageUrl: https://github.com/sound-ws/lambda-bearer-authorizer
-    SourceCodeUrl: https://github.com/sound-ws/lambda-bearer-authorizer
+    HomePageUrl: https://github.com/firstcoders/lambda-bearer-authorizer
+    SourceCodeUrl: https://github.com/firstcoders/lambda-bearer-authorizer
     SemanticVersion: 1.0.0 # overwritten by sam publish cli command
