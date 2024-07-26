@@ -67,7 +67,7 @@ Outputs:
 
 Metadata:
   AWS::ServerlessRepo::Application:
-    Name: firstcoders-lambda-bearer-authorizer
+    Name: fc-lambda-bearer-authorizer
     Description: >
       A lambda authorizer for a bearer token
     Author: Team First Coders
