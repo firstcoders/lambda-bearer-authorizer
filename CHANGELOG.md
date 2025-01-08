@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.4-beta.2](https://github.com/firstcoders/lambda-bearer-authorizer/compare/@firstcoders/lambda-bearer-authorizer@0.0.4-beta.1...@firstcoders/lambda-bearer-authorizer@0.0.4-beta.2) (2025-01-08)
+
+**Note:** Version bump only for package @firstcoders/lambda-bearer-authorizer
+
+
+
+
+
 ## [0.0.4-beta.1](https://github.com/firstcoders/lambda-bearer-authorizer/compare/@firstcoders/lambda-bearer-authorizer@0.0.4-beta.0...@firstcoders/lambda-bearer-authorizer@0.0.4-beta.1) (2024-12-07)
 
 **Note:** Version bump only for package @firstcoders/lambda-bearer-authorizer
